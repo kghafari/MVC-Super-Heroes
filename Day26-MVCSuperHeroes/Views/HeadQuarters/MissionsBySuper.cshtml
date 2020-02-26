@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewData["Title"] = "MissionsBySuper";
+}
+
+@model List<Mission>
+
+<h1>Missions By Super:</h1>
+
+<div class="row">
+    @foreach(Mission mission in Model)
+    {
+        <div class=" col-md-3">
+            <h3>@mission.MissionName</h3>
+            <p>@mission.Completed</p>
+            <p>@mission.Difficulty / 10</p>
+            <p>@mission.DueDate.ToShortDateString()</p>
+        </div>
+    }
+
+</div>
+

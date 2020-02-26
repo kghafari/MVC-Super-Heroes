@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewData["Title"] = "ListSupers";
+}
+
+@model List<Super>
+
+<h1>List of Super Heroes:</h1>
+
+<table class="table">
+    <tr>
+        <th>Secret Idenity</th>
+        <th>Hero Name</th>
+        <th>Power</th>
+        <th>Power Level</th>
+        <th>Cape?</th>
+        <th>Good?</th>
+    </tr>
+
+@foreach (Super super in Model)
+{
+    <tr>
+        <td>@super.Name</td>
+        <td>@super.SuperName</td>
+        <td>@super.Power</td>
+        <td>@super.PowerLevel</td>
+        <td>@super.Cape</td>
+        <td>@super.Good</td>
+        <td>
+            <a href="../Headquarters/MissionsBySuper?id=@super.SuperID">See missions</a>
+        </td>
+    </tr>
+}
+
+</table>
+
